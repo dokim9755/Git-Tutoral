@@ -1,0 +1,169 @@
+body {
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: normal;
+    margin: 10px 0;
+}
+.container {
+    height: 100vh;
+}
+.login {
+    width: 430px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid rgba(0,0,0,.2);
+    padding: 0 20px;
+}
+.header {
+    text-align: center;
+    padding: 10px;
+}
+.login-type {
+    text-align: center;
+}
+.login-type h3 {
+    font-size: 34px;
+    font-weight: normal;
+    text-align: center;
+    margin: 10px 0;
+}
+
+
+/* button */
+a.btns {
+    display: block;
+    text-decoration: none;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    position: relative;
+}
+a.btns:hover {
+    opacity: 0.7;
+}
+
+a.btn1 {
+    background-color: #03c75a;
+}
+a.btn2 {
+    background-color: #ffeb00;
+    color: black;
+}
+a.btn3 {
+    background-color: #212529;
+}
+a.btn4 {
+    background-color: #3c5a99;
+}
+
+/* xeicon 아이콘 */
+.xi-naver {
+    font-size: 1.5rem;
+    position: absolute;
+    left: 15px;
+    top: 13px;
+}
+
+.xi-kakaotalk {
+    font-size: 1.5rem;
+    position: absolute;
+    left: 15px;
+    top: 13px;
+}
+
+.xi-apple {
+    font-size: 1.5rem;
+    position: absolute;
+    left: 15px;
+    top: 13px;
+}
+
+.xi-facebook-official {
+    font-size: 1.5rem;
+    position: absolute;
+    left: 15px;
+    top: 13px;
+}
+
+/* line */
+.or-line {
+    display: block;
+    margin: 10px 0;
+    position: relative;
+}
+
+.or-line:before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 0;
+    background-color: rgb(194, 194, 194);
+    width: 46%;
+    height: 1px;
+}
+
+.or-line::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: 0;
+    background-color: rgb(194, 194, 194);
+    width: 46%;
+    height: 1px;
+}
+
+/* login */
+.login-form input {
+    display: block;
+    padding: 14px 17px 13px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+}
+
+.input-check {
+    margin-top: 10px;
+}
+
+/* footer */
+.footer {
+    padding: 5px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.btn {
+    width: 100%;
+    padding: 14px 14px;
+    margin: 0;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 6px;
+    background-color: #0d6efd;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.footer a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+.btn:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,136 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Nanum Gothic Coding', monospace;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+select:hover,
+label:hover,
+input:hover,
+button:hover {
+    cursor: pointer;
+}
+
+/* body */
+div.container { 
+    height: 100vh;
+}
+
+div.container div.main {
+    width: 720px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+div.container div.main div.main_logo h1 {
+    text-align: center;
+    height: 80px;
+}
+
+div.container div.main div.main_logo h1 a {
+    font-size: 3rem;
+    font-weight: normal;
+    color: #333;
+    padding: 10px;
+}
+
+div.container div.main div.main_form {
+    margin-top: 20px;
+    width: 540px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+div.container div.main div.main_form h3 {
+    margin-top: 19px;
+    margin-bottom: 8px;
+}
+
+div.container div.main div.main_form .main_label {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+div.container div.main div.main_form .form_input {
+    display: block;
+    padding: 10px 0 10px 12px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #dadada;
+    border-radius: 6px;
+}
+
+span.form_span {
+    display: block;
+    margin-top: 9px;
+    font-size: 12px;
+    font-weight: 100;
+    color: red;
+}
+
+div#birth input {
+    width: 172px;
+    display: inline;
+}
+
+select#mm {
+    width: 160px;
+    height: 50px;
+    padding: 11px 14px;
+    margin: 0 10px;
+    border: 1px solid #dadada;
+    border-radius: 6px;
+}
+
+
+div.gender label {
+    margin-right: 15px;
+}
+
+input#email {
+    width: 31%;
+    display: inline;
+}
+
+select#email2 {
+    width: 32%;
+    height: 50px;
+}
+
+div#btn_zone {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn {
+    width: 40%;
+    height: 60px;
+    margin-right: 8px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 6px;
+}
+
+.btn:nth-child(1) {
+    background-color: #fff;
+    border: 1px solid #dadada;
+}
+
+.btn:nth-child(2) {
+    background-color: #0d6efd;
+    color: #fff;
+    border: 1px solid #dadada;
+}

@@ -1,0 +1,218 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+::after, ::before {
+    box-sizing: border-box;
+}
+
+ul { list-style-type: none }
+
+a { text-decoration: none }
+
+caption {
+    overflow: hidden;
+    margin-top: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    font-size: 0;
+    line-height: 0;
+}
+
+.nav-bar {
+    width: 100%;
+    padding: 8px 0;
+    background-color: #212529;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.nav-inner {
+    width: 100%;
+    display: flex;
+    padding: 0 3rem;
+    margin: 0 auto;
+}
+
+.nav-logo {
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 1rem;
+    width: auto;
+    line-height: 40px;
+    color: rgba(255, 255, 255);
+    white-space: nowrap;
+}
+
+.nav-toggle {
+    display: none;
+    padding: 0 10px;
+    font-size: 30px;
+    width: auto;
+    height: max-content;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.nav-menu {
+    display: flex;
+    margin-left: auto;
+    /* flex-grow: 1; */
+    /* margin-bottom: 2px; */
+}
+.nav-item {
+    display: flex;
+    margin: auto;
+}
+
+.nav-item li {
+    display: list-item;
+    margin: auto;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.5rem;
+    line-height: 1.5rem;
+    color: rgba(255, 255, 255, 0.55);
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* container 게시글 */
+.container {
+    border: 1px solid skyblue;
+    margin: 100px auto 0;
+    width: 960px;
+}
+
+.container h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+span.red {
+    color: red;
+}
+
+/* 테이블 */
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border-top: 1px solid #464646;
+    border-bottom: 1px solid #464646;
+}
+
+td {
+    border-top: 1px solid #eee;
+    height: 50px;
+    color: #464646;
+}
+
+th {
+    height: 55px;
+    border-top: 2px solid #212529;
+    border-bottom: 1px solid #212529;
+}
+
+tr:first-child td { border-top: none; }
+
+tr:hover{
+    background:#f3f3f3;
+}
+
+td a {
+    color: #464646;
+}
+
+.table_title{
+    text-align: left;
+    padding: 0 5px;
+}
+.table_title:hover {
+    text-decoration: underline;
+}
+
+/* page btn */
+.paging_box {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.paging_box a {
+    font-size: 0.8rem;
+    font-weight: 700;
+    border-right: 1px solid #5f5f5f;
+    margin-left: -1px;
+    padding: 0px 6px 0px 2px;
+    color: #5F5F5F;
+}
+
+@media (min-width: 576px) {
+    .nav-inner{max-width: 540px;}
+}
+
+@media (min-width: 768px) {
+    .nav-inner{max-width: 720px;}
+
+}
+
+@media (min-width: 992px) {
+    .nav-inner{max-width: 960px;}
+}
+
+
+@media (min-width: 1200px) {
+    .nav-inner{max-width: 1140px;}
+}
+
+@media (min-width: 1400px) {
+    .nav-inner{max-width: 1320px;}
+}
+
+@media (max-width: 991px) {
+    .nav-inner {
+        flex-direction: column;
+        position: relative;
+    }
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        top: -2px;
+        right: 8%;
+    }
+    .nav-menu {
+        display: none;
+        width: 100%;
+    }
+    .nav-item {
+        display: block;
+        margin-bottom: 8px;
+    }
+    .nav-link {
+        padding-left: 0;
+    }
+    .nav-login {
+        display: none;
+        width: 100%;
+        padding-bottom: 8px;
+    }
+    .nav-menu.active,
+    .nav-login.active{
+        display: block;
+        transition: 2s;
+    }
+}

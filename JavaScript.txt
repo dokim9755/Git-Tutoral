@@ -1,0 +1,60 @@
+1. use strict
+비상식적인 내용은 에러, 상식적인 내용으로 상식적인 범위 안에서 자바스크립트 가능
+
+2. Variable(변수 = Mutable 뮤터블, 변화하는), rw(read / write)
+ 1) var ( ES5 ) var hoisting(move declaration from bottom to top) 
+어디에 선언했냐에 상관없이 항상 제일 위로 선언을 끌어올려 주는 것
+has no block scope 블록 스콥을 무시한다.
+
+ 2) let ( ES6 )
+block scope 블록 스콥 사용가능
+
+
+gloval scope 선언도 가능하다
+ex) let globalName = 'global name';
+
+3. Constants(상수 = Immutable 임뮤터블, 변화 불가), r(read only)
+const 값을 할당한 다음에 다시는 변경되지 않도록
+보안성, 쓰레드 안전성, 사람의 실수를 줄이다.
+// Note
+Immutable data types: 
+
+4. Variable types
+ 1) primitive, single item : number, string, boolean, null, undefiedn, symbol
+ 2) object, box container
+ 3) function, first-class function
+// Number
+ const infinity = 1 / 0; // Infinity
+ const negativeInfinity = -1 / 0; -Infinity
+ NaN = not a number(숫자가 아닌)
+
+// template literals (string) 탬플릿 리터럴
+문자열 생성시 따옴표 대신, 백틱(`)을 사용한다.
+ex) let name = `사과`;	let price = 100;	let num = 5;
+console.log(name + "의 구매가는 " + (price * num) + "원 입니다"); 옛날
+console.log(`${name}의 구매가는 ${price * num}원 입니다.`) 백틱(`) 방식의 현재
+
+// symbol
+const symbol1, symbol2 = Symbol('id); 상수가 다르지만 심볼의 값이 같을 경우
+console.log(symbol1 === sysbol2); // false 둘이 다르다.
+const gsymbol1, gsymbol2 = Symbol.for('id); 상수가 다르지만 심볼의 값이 같을 경우
+console.log(gsymbol1 === gsysbol2); // ture .for
+console.log(`value: ${symbol1.description}, type: ${typeof symbol1}`);  // 심볼은 .description
+
+5. Dynmic typing
+let  name = 1; 으로 설정해도 과정을 통해 문자열로 변환 가능
+
+6. Ternary operator : 삼항 연산자
+구문 : condition ? value 1 : value 2;  // 조건 ? 값1(true) : 값2(false)
+조건이 만족되면 값1 만족하지 못하면 값2
+
+7. Function 선언 // 함수 선언문 방식( function f1 () {} )과 함수 표현식 방식( let f1 = () => {} )
+function name(param1, param2)  //  function printHello() { console.log('Hello'); } printHello();
+const f1 = function f(arg1, arg2){ return arg1 + arg2 ;} // 변경 전 함수
+const f2 = (arg1, arg2) => { return arg1 + arg2; } == (arg1, arg2) => arg1 + arg2; // 변경 후
+
+8. in operator : (key in obj) // console.log('name' in student) 학생 옵젝에 이름의 키가 있느냐
+데이터 프로퍼티, 접근자 프로퍼티 getter / setter
+student = { name: 'sh', age = 27}
+'name': 'sh' = 프로퍼티 // name = key // 'sh' = value
+객체의 속성 = 프로퍼티 =  name: 'sh', age = 27

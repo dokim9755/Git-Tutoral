@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<style>
+    select {
+        width: 160px;
+        height: 50px;
+        padding: 11px 14px;
+        margin: 0 10px;
+        border: 1px solid #dadada;
+        border-radius: 6px;
+    }
+</style>
+<body>
+    <select name="m" id="mm" class="mms"> <!-- 나중에 함수로 -->
+        <option value="" selected>월</option>
+        
+    </select>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+        // function calculate(command, a, b) {
+        calculate = (command, a, b) => {
+            switch(command) {
+                case 'add':
+                    return a + b;
+                case  'substract':
+                    return a - b;
+                case 'divide':
+                    return a / b;
+                case 'multiply':
+                    return a * b;
+                case 'remainder':
+                    return a % b;
+                default:
+                    throw Error('unkonwn command')
+            }
+        };
+        console.log(calculate('remainder', 12, 6));
+        // let a = 0;
+        // while(a<=10)
+        // console.log(a);
+
+        // 상단 이동 스크롤 버튼
+        // var toggle = document.querySelector('.nav-toggle');
+        // var menu = document.querySelector('.nav-menu');
+        // var login = document.querySelector('.nav-login');
+
+        // toggle.addEventListener('click', () => {
+        //     menu.classList.toggle('active');
+        //     login.classList.toggle('active' );
+        // });
+
+        $(document).ready(function(){
+            // var now = new Date();
+            var md = 12;
+            for(var i=1; i <= 12; i++) {
+                var mm = i;            
+                // console.log(mm);
+            $('.mms').append('<option value="' + mm + '">' + mm + '</option>');    
+            }
+            // $("#mm  > option[value=]").attr("selected", "true");  
+            // $("#mm  > option[value="+mm+"]").attr("selected", "true");            
+            });
+      </script>
+</body>
+</html>
+
+<!-- $(document).ready(function(){            
+    var now = new Date();
+    var year = now.getFullYear();
+    var mon = (now.getMonth() + 1) > 9 ? ''+(now.getMonth() + 1) : '0'+(now.getMonth() + 1); 
+    var day = (now.getDate()) > 9 ? ''+(now.getDate()) : '0'+(now.getDate());           
+    //년도 selectbox만들기               
+    for(var i = 1900 ; i <= year ; i++) {
+        $('#year').append('<option value="' + i + '">' + i + '년</option>');    
+    }
+
+    // 월별 selectbox 만들기            
+    for(var i=1; i <= 12; i++) {
+        var mm = i > 9 ? i : "0"+i ;            
+        $('#month').append('<option value="' + mm + '">' + mm + '월</option>');    
+    }
+    
+    // 일별 selectbox 만들기
+    for(var i=1; i <= 31; i++) {
+        var dd = i > 9 ? i : "0"+i ;            
+        $('#day').append('<option value="' + dd + '">' + dd+ '일</option>');    
+    }
+    $("#year  > option[value="+year+"]").attr("selected", "true");        
+    $("#month  > option[value="+mon+"]").attr("selected", "true");    
+    $("#day  > option[value="+day+"]").attr("selected", "true");       
+  
+}) -->

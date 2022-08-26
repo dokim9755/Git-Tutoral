@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하이미디어 종토방 회원가입</title>
+    <link rel="stylesheet" href="/css/form.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="main_logo">
+                <h1><a href="index.html">하이미디어</a></h1>
+            </div>
+            <div class="main_form">
+                <form action="#">
+                    <h3><label for="id" class="main_label">아이디</label></h3>
+                    <input class="form_input" type="text" name="아이디" id="id" placeholder="ID를 입력해주세요" maxlength="20">
+                    <span class="form_span">필수 정보입니다.</span>
+
+                    <h3><label for="pwd" class="main_label">비밀번호</label></h3>
+                    <input class="form_input" type="password" name="비밀번호" id="pwd" placeholder=" 8~15자의 영문 대/소문자, 숫자 또는 특수문자 조합" maxlength="15">
+                    <span class="form_span">필수 정보입니다.</span>
+
+                    <h3><label for="pwd_chk" class="main_label">비밀번호 재확인</label></h3>
+                    <input class="form_input" type="password" name="비밀번호 재확인" id="pwd_chk">
+                    <span class="form_span">필수 정보입니다.</span>
+
+                    <h3><label for="name" class="main_label">이름</label></h3>
+                    <input class="form_input" type="text" name="이름" id="name">
+                    <span class="form_span">필수 정보입니다.</span>
+
+                    <div id="birth">
+                        <h3><label for="yy" class="main_label">생년월일</label></h3>
+                        <input class="form_input" type="text" id="yy" placeholder="년(4자)" maxlength="4">
+                        <select name="월" id="mm"> <!-- 나중에 함수로 -->
+                            <option value="" selected>월</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <input class="form_input" type="text" id="dd" placeholder="일" maxlength="2">
+                        <span class="form_span">필수 정보입니다.</span>
+                    </div>
+                    <div class="gender">
+                        <h3><label class="main_label">성별</label></h3>
+                        <input type="radio" name="성별" id="man">
+                        <label for="man">남자</label>
+                        <input type="radio" name="성별" id="woman">
+                        <label for="woman">여자</label>
+                        <span class="form_span">필수 정보입니다.</span>
+                    </div>
+                    <div class="email">
+                        <h3><label for="email" class="main_label">본인 이메일</label></h3>
+                        <input class="form_input" type="email" name="이메일" id="email">
+                        <span id="email_md">@</span>
+                        <input class="form_input" type="email" name="이메일" id="email">
+                        <select name="이메일" id="email2">
+                            <option value="" selected>이메일 선택</option>
+                            <option value="naver.com">naver.com</option>
+                            <option value="daum.net">daum.net</option>
+                            <option value="gmail.com">gmail.com</option>
+                            <option value="hotmail.com">hotmail.com</option>
+                            <option value="nate.com">nate.com</option>
+                            <option value="">직접입력</option>
+                        </select>
+                    </div>
+                    <div id="btn_zone">
+                        <button type="submit" class="btn">처음으로</button>
+                        <button type="submit" class="btn">회원가입</button>
+                    </div>                    
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
